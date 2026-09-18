@@ -1,210 +1,108 @@
-  <!-- Logo & Brand Name -->
-  <a href="#" onclick="resetFilters()" class="flex items-center gap-3 group">
-    <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-sage to-[#43564F] flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm ring-2 ring-brand-gold/30 group-hover:scale-105 transition-transform">
-      H
-    </div>
-    <div>
-      <h1 class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-sage leading-none">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Her Useful Finds | Smart Home & Style</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-stone-200">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-xl font-bold tracking-tight text-stone-900">
+        <span class="bg-stone-900 text-stone-50 w-8 h-8 rounded-full flex items-center justify-center font-serif italic text-base">H</span>
         Her Useful Finds
-      </h1>
-      <p class="text-[10px] sm:text-xs tracking-widest uppercase text-brand-textMuted font-medium mt-1">
-        Smart Home & Style
-      </p>
-    </div>
-  </a>
-
-  <!-- Desktop Search Bar -->
-  <div class="hidden md:flex flex-1 max-w-md mx-6 relative">
-    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
-    <input
-      type="text"
-      id="searchInputDesktop"
-      placeholder="Search organizers, home tech, kitchen hacks..."
-      oninput="handleSearch(this.value)"
-      class="w-full bg-[#F2ECE4] border-none rounded-full pl-10 pr-8 py-2 text-sm text-brand-textDark placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 transition"
-    />
-    <button id="clearSearchBtnDesktop" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600">
-      <i class="fa-solid fa-xmark text-sm"></i>
-    </button>
-  </div>
-
-  <!-- Header Actions -->
-  <div class="flex items-center gap-3">
-    <!-- Saved / Favorites Button -->
-    <button
-      onclick="toggleFavoritesOnly()"
-      id="favFilterBtn"
-      class="flex items-center gap-2 px-4 py-2 rounded-full border border-brand-border text-xs sm:text-sm font-medium bg-white text-brand-sage hover:border-brand-sage/40 transition-all shadow-sm"
-    >
-      <i id="favFilterIcon" class="fa-regular fa-heart text-brand-sage"></i>
-      <span class="hidden sm:inline">Saved</span>
-      <span id="favCountBadge" class="bg-brand-sage text-white px-1.5 py-0.2 rounded-full text-[10px] font-bold hidden">0</span>
-    </button>
-
-    <!-- Pinterest Link -->
-    <a
-      href="https://pinterest.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accentRed text-white text-xs sm:text-sm font-medium hover:bg-red-700 transition shadow-sm"
-    >
-      <i class="fa-brands fa-pinterest"></i>
-      <span class="hidden sm:inline">Pinterest</span>
-    </a>
-  </div>
-
-</div>
-
-<!-- Mobile Search Bar -->
-<div class="md:hidden px-4 pb-3">
-  <div class="relative">
-    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
-    <input
-      type="text"
-      id="searchInputMobile"
-      placeholder="Search useful finds..."
-      oninput="handleSearch(this.value)"
-      class="w-full bg-[#F2ECE4] border-none rounded-full pl-10 pr-8 py-2 text-sm text-brand-textDark placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-sage/30"
-    />
-  </div>
-</div>
-
-
-  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softBeige text-brand-sage text-xs font-medium tracking-wide border border-[#DFD5C6]">
-    <i class="fa-solid fa-wand-magic-sparkles text-brand-gold"></i>
-    <span>Tested • Curated • Practical Aesthetic Solutions</span>
-  </div>
-
-  <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl text-brand-sage leading-[1.15] font-normal tracking-tight">
-    Everyday Home Upgrades <br class="hidden sm:inline" />
-    <span class="italic font-light">That Actually Make Life Easier.</span>
-  </h2>
-
-  <p class="text-base sm:text-lg text-brand-textMuted max-w-2xl mx-auto font-light leading-relaxed">
-    Stop scrolling through endless clutter. We curate top-rated Amazon organizer tools, smart home tech, and everyday closet upgrades so you don't have to.
-  </p>
-
-  <!-- FTC Amazon Affiliate Disclosure Notice -->
-  <div class="bg-white/80 backdrop-blur-sm max-w-xl mx-auto p-3 rounded-2xl border border-brand-border text-[11px] text-brand-textMuted flex items-center justify-center gap-2 shadow-sm">
-    <i class="fa-solid fa-circle-info text-brand-gold text-sm"></i>
-    <span><strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.</span>
-  </div>
-
-</div>
-
-
-<!-- Category Filter Tabs -->
-<div class="flex items-center justify-between border-b border-brand-border pb-4 mb-8 overflow-x-auto gap-3 no-scrollbar" id="categoryContainer">
-  <!-- Generated via JS -->
-</div>
-
-<!-- Active Filters Status Bar -->
-<div id="activeFilterNotice" class="hidden items-center justify-between bg-brand-softBeige px-4 py-2.5 rounded-xl mb-6 text-xs text-brand-sage">
-  <span>Showing filtered results</span>
-  <button onclick="resetFilters()" class="font-bold underline hover:text-brand-sageHover">Clear all filters</button>
-</div>
-
-<!-- Product Grid -->
-<div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  <!-- Generated via JS -->
-</div>
-
-<!-- Empty State -->
-<div id="emptyState" class="hidden text-center py-16 bg-white rounded-3xl border border-brand-border p-8">
-  <i class="fa-solid fa-box-open text-4xl text-stone-300 mb-3"></i>
-  <h4 class="font-serif text-xl text-brand-sage font-medium mb-1">No useful finds found</h4>
-  <p class="text-sm text-brand-textMuted max-w-md mx-auto mb-6">
-    Try searching for another keyword like "kitchen", "lamp", or "organizer".
-  </p>
-  <button onclick="resetFilters()" class="px-5 py-2.5 rounded-full bg-brand-sage text-white text-xs font-medium hover:bg-brand-sageHover transition">
-    View All Discoveries
-  </button>
-</div>
-
-
-  <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-brand-sage hover:bg-white shadow">
-    <i class="fa-solid fa-xmark"></i>
-  </button>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2">
-    <div class="bg-brand-softBeige relative aspect-square sm:aspect-auto">
-      <img id="modalImage" src="" alt="Product" class="w-full h-full object-cover">
-    </div>
-
-    <div class="p-6 flex flex-col justify-between space-y-4">
-      <div>
-        <div class="flex items-center gap-2 mb-2">
-          <span id="modalCategory" class="bg-brand-softBeige text-brand-sage text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider"></span>
-          <div class="flex items-center gap-1 text-amber-500 text-xs font-bold">
-            <i class="fa-solid fa-star"></i>
-            <span id="modalRating" class="text-brand-textDark"></span>
-          </div>
-        </div>
-
-        <h3 id="modalTitle" class="font-serif text-2xl font-bold text-brand-sage"></h3>
-        <div id="modalPrice" class="my-2 text-xl font-bold text-brand-sage"></div>
-
-        <p id="modalDescription" class="text-xs text-brand-textMuted leading-relaxed mb-4"></p>
-
-        <div class="bg-brand-cream p-3 rounded-xl border border-brand-border space-y-1">
-          <span class="text-xs font-bold text-brand-sage flex items-center gap-1.5">
-            <i class="fa-solid fa-circle-check text-emerald-600"></i> Why We Recommend It:
-          </span>
-          <p id="modalWhyUseful" class="text-xs text-brand-textMuted"></p>
-        </div>
-      </div>
-
-      <div class="space-y-2 pt-2">
-        <!-- PRIMARY AFFILIATE BUTTON WITH #AD TAG -->
-        <a id="modalAmazonLink" href="#" target="_blank" rel="noopener sponsored" class="w-full py-3 rounded-full bg-brand-sage hover:bg-brand-sageHover text-white font-medium text-xs sm:text-sm flex items-center justify-center gap-2 shadow transition">
-          <span>Shop on Amazon</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-          <span class="text-[10px] bg-white/20 px-1.5 py-0.5 rounded font-normal ml-1">#ad</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="https://pinterest.com" target="_blank" rel="noopener" class="text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-stone-900 transition">
+          <i class="fa-brands fa-pinterest text-rose-600 text-sm mr-1"></i> Pinterest
         </a>
       </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-4xl mx-auto px-4 py-12 text-center">
+    <span class="inline-block px-3 py-1 bg-stone-200 text-stone-700 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+      Tested • Curated • Practical Aesthetic
+    </span>
+    <h1 class="text-3xl md:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight mb-4">
+      Everyday Home Upgrades That Actually Make Life Easier.
+    </h1>
+    <p class="text-stone-600 text-base md:text-lg max-w-2xl mx-auto mb-6">
+      Stop scrolling through endless clutter. We curate top-rated Amazon organizer tools, smart home tech, and everyday closet upgrades so you don't have to.
+    </p>
+    <div class="p-3 bg-amber-50 border border-amber-200/60 rounded-lg text-xs text-amber-800 max-w-xl mx-auto">
+      <strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases at no extra cost to you. #ad
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <main class="max-w-6xl mx-auto px-4 pb-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Product Card 1 -->
+      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
+        <div class="aspect-square bg-stone-100 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Self-Dispensing Soap Pump" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">Kitchen</span>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="font-bold text-stone-900 text-lg mb-2">Automated Soap & Sponge Caddy</h3>
+          <p class="text-stone-600 text-sm mb-4 flex-grow">Keeps your countertop clear of water pools with a sleek direct-draining base.</p>
+          <a href="https://www.amazon.com?tag=herusefulfinds-20" target="_blank" rel="noopener" class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition">
+            Shop on Amazon <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
+        <div class="aspect-square bg-stone-100 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Minimalist Wireless Lamp" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">Decor</span>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="font-bold text-stone-900 text-lg mb-2">Touch-Control Ambient Accent Light</h3>
+          <p class="text-stone-600 text-sm mb-4 flex-grow">Rechargeable warm-tone LED lamp perfect for cozy reading corners and dining setups.</p>
+          <a href="https://www.amazon.com?tag=herusefulfinds-20" target="_blank" rel="noopener" class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition">
+            Shop on Amazon <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
+        <div class="aspect-square bg-stone-100 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Acrylic Drawer Organizers" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">Organization</span>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="font-bold text-stone-900 text-lg mb-2">Modular Clear Drawer Bins</h3>
+          <p class="text-stone-600 text-sm mb-4 flex-grow">Set of 25 clear organizers with non-slip silicone pads for vanity or office desk setup.</p>
+          <a href="https://www.amazon.com?tag=herusefulfinds-20" target="_blank" rel="noopener" class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition">
+            Shop on Amazon <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
+          </a>
+        </div>
+      </div>
 
     </div>
-  </div>
+  </main>
 
-</div>
+  <!-- Simple Footer -->
+  <footer class="border-t border-stone-200 bg-white py-8 text-center text-xs text-stone-500">
+    <p>© 2026 Her Useful Finds. All rights reserved.</p>
+    <p class="mt-2">Participant in the Amazon Services LLC Associates Program.</p>
+  </footer>
 
-
-  <h3 class="font-serif text-3xl sm:text-4xl font-normal tracking-tight">
-    Get Weekly Finds in Your Inbox
-  </h3>
-
-  <p class="text-sm text-stone-300 max-w-lg mx-auto leading-relaxed">
-    Join home enthusiasts receiving our weekly top practical product discoveries.
-  </p>
-
-  <form onsubmit="handleSubscribe(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
-    <input 
-      type="email" 
-      id="newsletterEmail"
-      placeholder="Enter your email address..." 
-      required
-      class="flex-1 bg-white/10 border border-white/20 rounded-full px-5 py-3 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-gold"
-    />
-    <button 
-      type="submit"
-      class="px-6 py-3 rounded-full bg-brand-gold text-brand-sage font-semibold text-sm hover:bg-amber-400 transition shadow-md whitespace-nowrap"
-    >
-      Subscribe
-    </button>
-  </form>
-
-  <p class="text-[11px] text-stone-400">
-    No spam ever. Unsubscribe at any time.
-  </p>
-</div>
-
-
-  <div class="flex items-center gap-6">
-    <a href="https://pinterest.com" target="_blank" class="hover:text-white transition">Pinterest</a>
-    <a href="https://amazon.com" target="_blank" class="hover:text-white transition">Amazon Associates</a>
-  </div>
-
-  <div class="text-[11px]">
-    © <span id="year"></span> Her Useful Finds. All Amazon trademarks belong to Amazon.com.
-  </div>
-</div>
+</body>
+</html>
