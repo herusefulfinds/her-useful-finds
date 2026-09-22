@@ -1,539 +1,501 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="p:domain_verify" content="0fd47bd2c42054b5e2f869db3ee8d6df"/>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Her Useful Finds | Smart Finds for Everyday Life</title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
+      background: #f7f2eb;
+      color: #40382f;
     }
 
-    /* Guide Sections */
-    .section {
-      max-width: 1152px;
-      margin: 0 auto;
-      padding: 0 16px 40px;
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
     }
 
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 32px;
+    .soft-card {
+      background: #fffaf4;
+      border: 1px solid #e8ddd0;
     }
 
-    .section-label {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: #78716c;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+    .soft-button {
+      background: #6f6255;
+      color: white;
+      transition: all 0.2s ease;
     }
 
-    .section-heading h2 {
-      margin: 0 0 12px;
-      color: #1c1917;
-      font-size: 28px;
-      line-height: 1.25;
-      font-weight: 800;
-    }
-
-    .section-heading p {
-      margin: 0;
-      color: #57534e;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .tip-card {
-      padding: 28px;
-      background: #ffffff;
-      border: 1px solid #e7e5e4;
-      border-radius: 16px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-    }
-
-    .tip-number {
-      display: block;
-      margin-bottom: 14px;
-      color: #a8a29e;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .tip-card h3 {
-      margin: 0 0 10px;
-      color: #1c1917;
-      font-size: 17px;
-      line-height: 1.4;
-      font-weight: 700;
-    }
-
-    .tip-card p {
-      margin: 0;
-      color: #57534e;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .guide-cta {
-      text-align: center;
-      margin-top: 28px;
-    }
-
-    .guide-cta a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #1c1917;
-      color: #ffffff;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .guide-cta a:hover {
-      background: #292524;
-    }
-
-    @media (max-width: 768px) {
-      .tips-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-heading h2 {
-        font-size: 24px;
-      }
+    .soft-button:hover {
+      background: #564b41;
+      transform: translateY(-1px);
     }
   </style>
+
 </head>
 
-<body class="bg-stone-50 text-stone-800 antialiased selection:bg-stone-200">
+<body>
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-40 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+  <!-- HEADER -->
 
-      <a href="#" class="flex items-center gap-2 text-xl font-bold tracking-tight text-stone-900">
-        <span class="bg-stone-900 text-stone-50 w-8 h-8 rounded-full flex items-center justify-center font-serif italic text-base">
+  <header class="border-b border-[#e8ddd0] bg-[#fbf7f1]">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[#e7d9ca] flex items-center justify-center text-[#6f6255] font-semibold">
           H
-        </span>
-        Her Useful Finds
-      </a>
+        </div>
 
-      <div class="flex items-center gap-4">
-        <a
-          href="https://pinterest.com"
-          target="_blank"
-          rel="noopener"
-          class="text-xs font-semibold uppercase tracking-wider text-stone-600 hover:text-stone-900 transition"
-        >
-          <i class="fa-brands fa-pinterest text-rose-600 text-sm mr-1"></i>
-          Pinterest
-        </a>
-      </div>
+```
+    <span class="text-lg font-semibold tracking-wide text-[#51463c]">
+      Her Useful Finds
+    </span>
+  </a>
 
-    </div>
+  <a
+    href="https://ph.pinterest.com/herusefulfinds/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-sm font-medium text-[#75685c] hover:text-[#40382f]"
+  >
+    Pinterest
+  </a>
+</div>
+```
+
   </header>
 
+  <!-- HERO -->
 
-  <!-- Hero Section -->
-  <section class="max-w-4xl mx-auto px-4 py-12 text-center">
+  <section class="bg-[#f7f2eb]">
+    <div class="max-w-5xl mx-auto px-6 py-20 text-center">
 
-    <span class="inline-block px-3 py-1 bg-stone-200 text-stone-700 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
-      Smart Finds • Useful Products • Better Everyday Living
-    </span>
+```
+  <div class="inline-block px-4 py-2 rounded-full bg-[#e9ded1] text-[#75685c] text-xs font-semibold tracking-wider uppercase mb-6">
+    Smart Finds • Useful Products • Better Everyday Living
+  </div>
 
-    <h1 class="text-3xl md:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight mb-4">
-      Smart Finds That Make Everyday Life Better.
-    </h1>
+  <h1 class="text-4xl md:text-6xl leading-tight text-[#40382f] mb-6">
+    Smart Finds That Make Everyday Life Better.
+  </h1>
 
-    <p class="text-stone-600 text-base md:text-lg max-w-2xl mx-auto mb-6">
-      Discover useful products for home, travel, beauty and everyday life — thoughtfully curated to help you find things actually worth buying.
-    </p>
+  <p class="max-w-2xl mx-auto text-lg leading-8 text-[#75685c]">
+    Discover useful products for home, travel, beauty and everyday life —
+    thoughtfully curated to help you find things actually worth buying.
+  </p>
 
-    <div class="p-3 bg-amber-50 border border-amber-200/60 rounded-lg text-xs text-amber-800 max-w-xl mx-auto">
-      <strong>Affiliate Disclosure:</strong>
-      As an Amazon Associate, I earn from qualifying purchases at no extra cost to you. #ad
-    </div>
+  <p class="max-w-2xl mx-auto mt-6 text-xs leading-6 text-[#8b7d70]">
+    Affiliate Disclosure: As an Amazon Associate, I earn from qualifying purchases
+    at no extra cost to you. #ad
+  </p>
+
+</div>
+```
 
   </section>
 
+  <!-- KITCHEN ORGANIZATION GUIDE -->
 
-  <!-- Kitchen Organization Article -->
-  <section class="section">
+  <section class="max-w-6xl mx-auto px-6 py-16">
 
-    <div class="section-heading">
-      <span class="section-label">KITCHEN ORGANIZATION</span>
+```
+<div class="max-w-3xl mx-auto text-center mb-12">
 
-      <h2>
-        7 Small Kitchen Organization Ideas That Make a Big Difference
-      </h2>
+  <p class="text-xs font-semibold tracking-[0.2em] text-[#9a8877] uppercase mb-3">
+    Kitchen Organization
+  </p>
 
-      <p>
-        Simple ways to make your kitchen feel cleaner, more organized and more polished without a full makeover.
+  <h2 class="text-3xl md:text-4xl text-[#40382f] mb-4">
+    7 Small Kitchen Organization Ideas That Make a Big Difference
+  </h2>
+
+  <p class="text-[#75685c] leading-7">
+    Simple ways to make your kitchen feel cleaner, more organized and more polished
+    without a full makeover.
+  </p>
+
+</div>
+
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">01</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Use Clear Storage Containers</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Clear containers make pantry staples easier to see while creating a more
+      consistent and organized look.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">02</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Group Similar Items</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Keep baking supplies, snacks, spices and everyday cooking essentials together
+      so everything has a defined place.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">03</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Add a Small Countertop Tray</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      A simple tray can keep frequently used items together and make your countertop
+      look more intentional.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">04</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Organize One Drawer</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Start with your most cluttered drawer and use simple dividers or clear bins
+      to separate everyday essentials.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">05</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Keep Counters Mostly Clear</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Leave only the items you use regularly on the counter. Less visual clutter
+      can make a kitchen feel instantly cleaner.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7">
+    <span class="text-sm text-[#a38f7d]">06</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">Coordinate Everyday Accessories</h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Matching or complementary colors for soap dispensers, trays and containers
+      can create a more cohesive appearance.
+    </p>
+  </div>
+
+  <div class="soft-card rounded-2xl p-7 md:col-span-2 lg:col-span-1">
+    <span class="text-sm text-[#a38f7d]">07</span>
+    <h3 class="text-xl mt-3 mb-3 text-[#51463c]">
+      Make Frequently Used Items Easy to Reach
+    </h3>
+    <p class="text-sm leading-6 text-[#75685c]">
+      Store everyday cooking tools and ingredients where you can reach them easily,
+      while keeping less-used items tucked away.
+    </p>
+  </div>
+
+</div>
+
+
+<div class="text-center mt-10">
+  <a
+    href="https://link.amazon/B06OeePWk"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="soft-button inline-block px-6 py-3 rounded-full text-sm font-semibold"
+  >
+    Shop a simple kitchen countertop upgrade →
+  </a>
+</div>
+```
+
+  </section>
+
+  <!-- KITCHEN SINK GUIDE -->
+
+  <section class="bg-[#eee4d9]">
+
+```
+<div class="max-w-6xl mx-auto px-6 py-16">
+
+  <div class="max-w-3xl mx-auto text-center mb-12">
+
+    <p class="text-xs font-semibold tracking-[0.2em] text-[#9a8877] uppercase mb-3">
+      Kitchen Guide
+    </p>
+
+    <h2 class="text-3xl md:text-4xl text-[#40382f] mb-4">
+      How to Make Your Kitchen Sink Look More Expensive
+    </h2>
+
+    <p class="text-[#75685c] leading-7">
+      Small changes can make your sink area feel cleaner, more coordinated and more elevated.
+    </p>
+
+  </div>
+
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-[#fffaf4] rounded-2xl p-7 border border-[#e5d8ca]">
+      <span class="text-sm text-[#a38f7d]">01</span>
+      <h3 class="text-xl mt-3 mb-3 text-[#51463c]">
+        Match Your Countertop Essentials
+      </h3>
+      <p class="text-sm leading-6 text-[#75685c]">
+        Matching soap and lotion dispensers instantly reduce visual clutter and
+        create a more polished look.
       </p>
     </div>
 
-
-    <div class="tips-grid">
-
-      <!-- Tip 01 -->
-      <div class="tip-card">
-        <span class="tip-number">01</span>
-
-        <h3>
-          Use Clear Storage Containers
-        </h3>
-
-        <p>
-          Clear containers make pantry staples easier to see while creating a more consistent and organized look.
-        </p>
-      </div>
-
-
-      <!-- Tip 02 -->
-      <div class="tip-card">
-        <span class="tip-number">02</span>
-
-        <h3>
-          Group Similar Items
-        </h3>
-
-        <p>
-          Keep baking supplies, snacks, spices and everyday cooking essentials together so everything has a defined place.
-        </p>
-      </div>
-
-
-      <!-- Tip 03 -->
-      <div class="tip-card">
-        <span class="tip-number">03</span>
-
-        <h3>
-          Add a Small Countertop Tray
-        </h3>
-
-        <p>
-          A simple tray can keep frequently used items together and make your countertop look more intentional.
-        </p>
-      </div>
-
-
-      <!-- Tip 04 -->
-      <div class="tip-card">
-        <span class="tip-number">04</span>
-
-        <h3>
-          Organize One Drawer
-        </h3>
-
-        <p>
-          Start with your most cluttered drawer and use simple dividers or clear bins to separate everyday essentials.
-        </p>
-      </div>
-
-
-      <!-- Tip 05 -->
-      <div class="tip-card">
-        <span class="tip-number">05</span>
-
-        <h3>
-          Keep Counters Mostly Clear
-        </h3>
-
-        <p>
-          Leave only the items you use regularly on the counter. Less visual clutter can make a kitchen feel instantly cleaner.
-        </p>
-      </div>
-
-
-      <!-- Tip 06 -->
-      <div class="tip-card">
-        <span class="tip-number">06</span>
-
-        <h3>
-          Coordinate Everyday Accessories
-        </h3>
-
-        <p>
-          Matching or complementary colors for soap dispensers, trays and containers can create a more cohesive appearance.
-        </p>
-      </div>
-
-
-      <!-- Tip 07 -->
-      <div class="tip-card">
-        <span class="tip-number">07</span>
-
-        <h3>
-          Make Frequently Used Items Easy to Reach
-        </h3>
-
-        <p>
-          Store everyday cooking tools and ingredients where you can reach them easily, while keeping less-used items tucked away.
-        </p>
-      </div>
-
-    </div>
-
-
-    <div class="guide-cta">
-      <a
-        href="https://link.amazon/B06OeePWk"
-        target="_blank"
-        rel="noopener sponsored"
-      >
-        Shop a simple kitchen countertop upgrade →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- Kitchen Sink Guide -->
-  <section class="section">
-
-    <div class="section-heading">
-      <span class="section-label">KITCHEN GUIDE</span>
-
-      <h2>
-        How to Make Your Kitchen Sink Look More Expensive
-      </h2>
-
-      <p>
-        Small changes can make your sink area feel cleaner, more coordinated and more elevated.
+    <div class="bg-[#fffaf4] rounded-2xl p-7 border border-[#e5d8ca]">
+      <span class="text-sm text-[#a38f7d]">02</span>
+      <h3 class="text-xl mt-3 mb-3 text-[#51463c]">
+        Add a Small Tray
+      </h3>
+      <p class="text-sm leading-6 text-[#75685c]">
+        A simple tray gives everyday items a defined space and makes your countertop
+        feel more intentional.
       </p>
     </div>
 
-
-    <div class="tips-grid">
-
-      <!-- Tip 01 -->
-      <div class="tip-card">
-        <span class="tip-number">01</span>
-
-        <h3>
-          Match Your Countertop Essentials
-        </h3>
-
-        <p>
-          Matching soap and lotion dispensers instantly reduce visual clutter and create a more polished look.
-        </p>
-      </div>
-
-
-      <!-- Tip 02 -->
-      <div class="tip-card">
-        <span class="tip-number">02</span>
-
-        <h3>
-          Add a Small Tray
-        </h3>
-
-        <p>
-          A simple tray gives everyday items a defined space and makes your countertop feel more intentional.
-        </p>
-      </div>
-
-
-      <!-- Tip 03 -->
-      <div class="tip-card">
-        <span class="tip-number">03</span>
-
-        <h3>
-          Keep Only the Essentials Out
-        </h3>
-
-        <p>
-          Remove extra bottles and loose items around the sink. A cleaner countertop naturally feels more elevated.
-        </p>
-      </div>
-
+    <div class="bg-[#fffaf4] rounded-2xl p-7 border border-[#e5d8ca]">
+      <span class="text-sm text-[#a38f7d]">03</span>
+      <h3 class="text-xl mt-3 mb-3 text-[#51463c]">
+        Keep Only the Essentials Out
+      </h3>
+      <p class="text-sm leading-6 text-[#75685c]">
+        Remove extra bottles and loose items around the sink. A cleaner countertop
+        naturally feels more elevated.
+      </p>
     </div>
 
+  </div>
 
-    <div class="guide-cta">
-      <a
-        href="https://link.amazon/B06OeePWk"
-        target="_blank"
-        rel="noopener sponsored"
-      >
-        See the amber glass dispenser set →
-      </a>
-    </div>
+
+  <div class="text-center mt-10">
+    <a
+      href="https://link.amazon/B06OeePWk"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+      class="soft-button inline-block px-6 py-3 rounded-full text-sm font-semibold"
+    >
+      See the amber glass dispenser set →
+    </a>
+  </div>
+
+</div>
+```
 
   </section>
 
+  <!-- PRODUCT FINDS -->
 
-  <!-- Product Grid Section -->
-  <main class="max-w-6xl mx-auto px-4 pb-20">
+  <section class="max-w-6xl mx-auto px-6 py-16">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+```
+<div class="text-center mb-12">
 
+  <p class="text-xs font-semibold tracking-[0.2em] text-[#9a8877] uppercase mb-3">
+    Useful Finds
+  </p>
 
-      <!-- Product Card 1 -->
-      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
+  <h2 class="text-3xl md:text-4xl text-[#40382f] mb-4">
+    Simple Finds Worth Having
+  </h2>
 
-        <div class="aspect-square bg-stone-100 relative overflow-hidden">
+  <p class="max-w-2xl mx-auto text-[#75685c] leading-7">
+    Practical products that make everyday spaces feel more organized, comfortable
+    and intentional.
+  </p>
 
-          <img
-            src="amber-glass-dispensers.png"
-            alt="Amber glass soap dispenser set with wooden tray"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
-
-          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">
-            Kitchen
-          </span>
-
-        </div>
+</div>
 
 
-        <div class="p-5 flex flex-col flex-grow">
-
-          <h3 class="font-bold text-stone-900 text-lg mb-2">
-            Amber Glass Soap Dispenser Set
-          </h3>
-
-          <p class="text-stone-600 text-sm mb-4 flex-grow">
-            A simple countertop upgrade that gives your kitchen or bathroom a cleaner, more coordinated look.
-          </p>
-
-          <a
-            href="https://link.amazon/B06OeePWk"
-            target="_blank"
-            rel="noopener sponsored"
-            class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition"
-          >
-            Shop on Amazon
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
-          </a>
-
-        </div>
-
-      </div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
 
-      <!-- Product Card 2 -->
-      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
+  <!-- PRODUCT 1 -->
+  <article class="soft-card rounded-2xl overflow-hidden group">
 
-        <div class="aspect-square bg-stone-100 relative overflow-hidden">
+    <div class="aspect-square overflow-hidden bg-[#eee4d9]">
+      <img
+        src="amber-glass-dispensers.png"
+        alt="Amber glass soap dispenser set with wooden tray"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+      >
+    </div>
 
-          <img
-            src="touch-control-lamp.jpg"
-            alt="Touch-control ambient accent lamp"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
+    <div class="p-6">
 
-          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">
-            Decor
-          </span>
+      <p class="text-xs font-semibold tracking-wider uppercase text-[#a38f7d] mb-2">
+        Kitchen
+      </p>
 
-        </div>
+      <h3 class="text-xl mb-3 text-[#51463c]">
+        Amber Glass Soap Dispenser Set
+      </h3>
 
+      <p class="text-sm leading-6 text-[#75685c] mb-5">
+        A simple countertop upgrade that gives your kitchen or bathroom a cleaner,
+        more coordinated look.
+      </p>
 
-        <div class="p-5 flex flex-col flex-grow">
-
-          <h3 class="font-bold text-stone-900 text-lg mb-2">
-            Touch-Control Ambient Accent Light
-          </h3>
-
-          <p class="text-stone-600 text-sm mb-4 flex-grow">
-            Rechargeable warm-tone LED lamp perfect for cozy reading corners and dining setups.
-          </p>
-
-          <a
-            href="https://link.amazon/B0iiXqits"
-            target="_blank"
-            rel="noopener sponsored"
-            class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition"
-          >
-            Shop on Amazon
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- Product Card 3 -->
-      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition group flex flex-col">
-
-        <div class="aspect-square bg-stone-100 relative overflow-hidden">
-
-          <img
-            src="drawer-organizer-bins.jpg"
-            alt="Modular clear drawer organizer bins"
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
-
-          <span class="absolute top-3 right-3 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">
-            Organization
-          </span>
-
-        </div>
-
-
-        <div class="p-5 flex flex-col flex-grow">
-
-          <h3 class="font-bold text-stone-900 text-lg mb-2">
-            Modular Clear Drawer Bins
-          </h3>
-
-          <p class="text-stone-600 text-sm mb-4 flex-grow">
-            Set of 25 clear organizers with non-slip silicone pads for vanity or office desk setup.
-          </p>
-
-          <a
-            href="https://link.amazon/B05wb8Tk9"
-            target="_blank"
-            rel="noopener sponsored"
-            class="w-full text-center bg-stone-900 hover:bg-stone-800 text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition"
-          >
-            Shop on Amazon
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 opacity-70"></i>
-          </a>
-
-        </div>
-
-      </div>
+      <a
+        href="https://link.amazon/B06OeePWk"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="soft-button inline-block px-5 py-2.5 rounded-full text-sm font-semibold"
+      >
+        Shop on Amazon
+      </a>
 
     </div>
 
-  </main>
+  </article>
 
 
-  <!-- Simple Footer -->
-  <footer class="border-t border-stone-200 bg-white py-8 text-center text-xs text-stone-500">
+  <!-- PRODUCT 2 -->
+  <article class="soft-card rounded-2xl overflow-hidden group">
 
-    <p>
-      © 2026 Her Useful Finds. All rights reserved.
-    </p>
+    <div class="aspect-square overflow-hidden bg-[#eee4d9]">
+      <img
+        src="touch-control-lamp.jpg"
+        alt="Touch-control ambient accent lamp"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+      >
+    </div>
 
-    <p class="mt-2">
-      Participant in the Amazon Services LLC Associates Program.
-    </p>
+    <div class="p-6">
+
+      <p class="text-xs font-semibold tracking-wider uppercase text-[#a38f7d] mb-2">
+        Decor
+      </p>
+
+      <h3 class="text-xl mb-3 text-[#51463c]">
+        Touch-Control Ambient Accent Light
+      </h3>
+
+      <p class="text-sm leading-6 text-[#75685c] mb-5">
+        Rechargeable warm-tone LED lamp perfect for cozy reading corners and
+        dining setups.
+      </p>
+
+      <a
+        href="https://link.amazon/B0iiXqits"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="soft-button inline-block px-5 py-2.5 rounded-full text-sm font-semibold"
+      >
+        Shop on Amazon
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- PRODUCT 3 -->
+  <article class="soft-card rounded-2xl overflow-hidden group">
+
+    <div class="aspect-square overflow-hidden bg-[#eee4d9]">
+      <img
+        src="drawer-organizer-bins.jpg"
+        alt="Modular clear drawer organizer bins"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+      >
+    </div>
+
+    <div class="p-6">
+
+      <p class="text-xs font-semibold tracking-wider uppercase text-[#a38f7d] mb-2">
+        Organization
+      </p>
+
+      <h3 class="text-xl mb-3 text-[#51463c]">
+        Modular Clear Drawer Bins
+      </h3>
+
+      <p class="text-sm leading-6 text-[#75685c] mb-5">
+        Set of 25 clear organizers with non-slip silicone pads for vanity or
+        office desk setup.
+      </p>
+
+      <a
+        href="https://link.amazon/B05wb8Tk9"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="soft-button inline-block px-5 py-2.5 rounded-full text-sm font-semibold"
+      >
+        Shop on Amazon
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- PRODUCT 4 -->
+  <article class="soft-card rounded-2xl overflow-hidden group">
+
+    <div class="aspect-square overflow-hidden bg-[#eee4d9]">
+      <img
+        src="charging-station.jpg"
+        alt="3-in-1 foldable magnetic wireless charging station"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+      >
+    </div>
+
+    <div class="p-6">
+
+      <p class="text-xs font-semibold tracking-wider uppercase text-[#a38f7d] mb-2">
+        Bedroom & Tech
+      </p>
+
+      <h3 class="text-xl mb-3 text-[#51463c]">
+        3-in-1 Foldable Magnetic Charging Station
+      </h3>
+
+      <p class="text-sm leading-6 text-[#75685c] mb-5">
+        A compact charging stand designed to keep your everyday Apple devices
+        together and your bedside table more organized.
+      </p>
+
+      <a
+        href="https://link.amazon/B04ilpHpt"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        class="soft-button inline-block px-5 py-2.5 rounded-full text-sm font-semibold"
+      >
+        Shop on Amazon
+      </a>
+
+    </div>
+
+  </article>
+
+</div>
+```
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="border-t border-[#e8ddd0] bg-[#fbf7f1]">
+
+```
+<div class="max-w-6xl mx-auto px-6 py-10 text-center">
+
+  <p class="text-sm text-[#75685c]">
+    © 2026 Her Useful Finds. All rights reserved.
+  </p>
+
+  <p class="text-xs text-[#9a8877] mt-2">
+    Participant in the Amazon Services LLC Associates Program.
+  </p>
+
+</div>
+```
 
   </footer>
 
